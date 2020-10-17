@@ -1,0 +1,75 @@
+% Preamble
+\documentclass[169]{beamer}
+\usetheme{metropolis}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{shellesc}
+\usepackage[outputdir=../auxil]{minted}
+\usepackage{xcolor}
+
+\title{A programming presentation}
+\date{\today}
+\author{Karthik Nishanth}
+\institute{Organization}
+
+% Global configuration
+\metroset{block=fill}
+\definecolor{srcbg}{rgb}{0.95,0.95,0.95}
+\setminted{fontsize=\footnotesize,autogobble,bgcolor={srcbg}}
+
+% Document
+\begin{document}
+
+    \maketitle
+
+    \section{First section}\label{sec:first}
+    \begin{frame}{Starter}
+        Hello world \texttt{Code} \emph{Emphasis}
+
+        Some more info about the \alert{alert} \\
+        \begin{block}{Default}
+            Default block
+        \end{block}
+
+        \begin{alertblock}{Alert}
+            Default block
+        \end{alertblock}
+        \begin{exampleblock}{Example}
+            Default block
+        \end{exampleblock}
+    \end{frame}
+
+    \begin{frame}{Two column}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                Left column
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item Right column item
+                    \item Right column item
+                    \item Right column item
+                \end{itemize}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Syntax highlighting}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{minted}{python}
+                    def main():
+                        println("Hello world")
+                \end{minted}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{minted}{kotlin}
+                    fun main() {
+                        println("Hello world")
+                    }
+                \end{minted}
+            \end{column}
+        \end{columns}
+    \end{frame}
+\end{document}
